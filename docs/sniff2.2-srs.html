@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Software Design Document</title>
+</head>
+<body bgcolor="#99CCCC">
+<div align="center"><h1><b>Sniff v2.2</b></h1></div>
+<div align="center"><h2><b>System Requirements</b></h2></div>
+<font size="+1">
+<div align="right"><b>December 09, 2004</b></div>
+<hr>
+<h2><b>1. Introduction:</h2></b>
+<p>Sniff v2.2 is a network monitoring tool intended to be used on platforms that run POSIX Operating Systems (Linux/BSD/Unix). It has been developed on Redhat Linux 9.0 platform using the C programming language. It makes use of external libraries for packet capturing, user interface and Unix OS features for creating shared memory buffer and semaphores. Statically linked binaries are available with the release which do not need the packet capturing libraries for execution. This document describes the system requirements for compilation, installation and execution of the software. Kindly go through the <a href="sniff2.2-sdd.html">Design Document</a> and the <a href="sniff2.2-manual.html">User Documentation</a> also.</p>
+<br>
+<a name="lib"></a>
+<h2><b>2. External Libraries:</h2></b>
+<b>2.1 PCAP Library:</b><br>
+<p>The software makes use of the PCAP library, which is available for all POSIX Operating Systems (Linux/BSD/Unix). Statically linked binaries, which do not need the PCAP library for their execution, are provided with the release. However, the library is necessary for compiling the source.</p>
+<p>Libpcap v0.7.2 (and earlier versions) had certain vulnerabilities (w.r.t. certain ISAKMP packets) which used to cause packet capture buffer overflow and subsequent crashing of the entire network interface. Luckily, the developers of Libpcap have fixed this flaw in the latest release of <a href="http://www.tcpdump.org/release/libpcap-0.8.3.tar.gz">Libpcap v0.8.3</a>. Users of Sniff are advised to use Libpcap v0.8.3 (and onwards) while compiling the source. The statically linked binaries provided with Sniff v2.2 use the benign Libpcap-v0.8.3.</p>
+
+<b>2.2 Unix Library for Shared Memory and Semaphore Management:</b><br>
+<p>The software requires Unix Memory Management (MM) and Interprocess Communication (IPC) libraries for compilation and execution. They are used for implementing shared memory buffer and semaphore operations respectively.</p>
+
+<b>2.3 NCurses Library:</b><br>
+<p>The software makes use of NCurses library for the summary display when the tool is being run. The statically linked binaries do not need the library. But compilation of the source requires the library to be installed in the system.</p>
+<br>
+<h2><b>3. Operating System Requirements:</h2></b>
+<p>The statically linked binaries require platforms running POSIX operating systems for successful execution. Also, the processes need root privileges for accessing the network interfaces. Compilation of the source has an additional requirement of the availability of the required libraries.</p>
+<br>
+<h2><b>4. Compiler Requirements:</h2></b>
+<b>4.1 Source Compilation:</b>
+<p>The tool has been programmed in the C programming language. The source has been successfully compiled using GCC ver3.x (GNU's C Compiler).</p>
+
+<b>4.2 Webpage Interface Interpretation:</b>
+<p>The webpage interface supported by the system requires Perl to interpret the CGI script. Also, the web server needs to be configured to run the CGI script. The script needs to be installed in the appropriate directory.</p>
+<hr>
+<i>Project developed by Kamesh Raghavendra (<a href="mailto: kameshr@gmail.com">kameshr@gmail.com</a>) under the guidance of Prof. R Kalyana Krishnan, Dept. of CSE, IIT Madras</i>
+</font>
+</body>
+</html>
