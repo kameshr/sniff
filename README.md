@@ -100,7 +100,7 @@ This CGI script provides the webpage user interface. It must be installed in the
 <p>The user interfaces (both console and webpage) consist of the header, the machinewise profile and the protocolwise profile. The header displays time, number of packets analysed, packet density and number of packets dropped. The machinewise profile shows the details of the packet activity of the most active systems in the network. The protocolwise profile gives the protocol distribution of the packets. (See the screenshot given below.) A sample <a href="iitm_sniff.cgi.html">webpage</a> (spawned by the CGI script) is also available.</p>
 <a name=screen></a>
 <p><i>A 450,000-odd packet analysis session is still going on...</i>
-<p><img align="top" src="screen1.jpg" width="836" height="536"></p><br>
+<p><img align="top" src="https://github.com/kameshr/sniff/blob/master/docs/screen1.jpg" width="836" height="536"></p><br>
 <hr>
 <i>Project developed by Kamesh Raghavendra (<a href="mailto: kameshr@gmail.com">kameshr@gmail.com</a>) under the guidance of Prof. R Kalyana Krishnan, Dept. of CSE, IIT Madras</i>
 </font>
