@@ -38,7 +38,7 @@
 </ul></li>
 
 <div align="center">
-<img src="packet.jpg"></img><br>
+<img src="https://github.com/kameshr/sniff/blob/master/docs/packet.jpg"></img><br>
 <i>Anatomy of a Packet</i></div><br>
 
 <li><b>Payload:</b> This is the actual data that the packet is delivering to the destination. If a packet is fixed-length, then the payload may be padded with blank information to make it of the right size.</li>
@@ -56,7 +56,7 @@
 </ul>
 
 <div align="center">
-<img src="protocol.JPG"></img><br>
+<img src="https://github.com/kameshr/sniff/blob/master/docs/protocol.JPG"></img><br>
 <i>Computer Network Protocol Stack</i></div><br>
 </p>
 
